@@ -1,8 +1,31 @@
-# React + Vite
+ #LMS Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ #### Setup instructions
 
-Currently, two official plugins are available:
+1.Clone the Project directory
+.....
+git clone https://github.com/ashish8513/lms-frontend-am.git 2. Move into the project directory
+.....
+......
+cd lms-frontend-am
+3.install dependencies
+npm i
+...... 4. run the server
+npm run lms-frontend-am
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ### setup the instructions for the tailwind
+
+ [Tailwind official instructions doc ](https://tailwindcss.com/docs/installation)
+
+ 1. install taiwind css (npm install -D tailwindcss)
+
+2.create tailwind by :-(npx tailwindcss init)
+
+2. add file extension to tailwind config file in the content property
+( ["./src/**/*.{html,js,jsx,ts,tsx}"])
+3. add the tailwind diector to tailwind at the top of the 'index.css' file
+.........
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.........
