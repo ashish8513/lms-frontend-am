@@ -21,8 +21,11 @@ npm run lms-frontend-am
 
 2.create tailwind by :-(npx tailwindcss init)
 
+// to install tailwind extra dependencies
+3. npm install postcss autofixer 
+
 2. add file extension to tailwind config file in the content property
-( ["./src/**/*.{html,js,jsx,ts,tsx}"])
+( ["./src/**/*.{html,js,jsx,ts,tsx}","./index.html])
 3. add the tailwind diector to tailwind at the top of the 'index.css' file
 .........
 @tailwind base;
