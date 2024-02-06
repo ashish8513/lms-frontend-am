@@ -6,6 +6,7 @@ import billGates from "../assets/Image/bill gates.png"
 import enstine from "../assets/Image/enstine.png"
 import steveJobs from "../assets/Image/setve jobs.png"
 import nelsonMandela from "../assets/Image/nelson mandela.png";
+import CarouselSlide from '../Components/CarouselSlide'
 function AboutUs() {
     return (
         <HomeLayout>
@@ -32,6 +33,7 @@ function AboutUs() {
                 </div>
 
                 <div class="carousel w-1/2 my-16 m-auto">
+                {/* <CarouselSlide /> */}
                     <div id="slide1" class="carousel-item relative w-full">
 
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
@@ -51,9 +53,9 @@ function AboutUs() {
                     <div id="slide2" class="carousel-item relative w-full">
 
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
-                            <img src={abj} class="w-40 rounded-full border-2 border-gray-400" />
+                            <img src={abj} class="w-40 rounded-full border-2 border-gray-400 	object-fit: cover " />
                             <p className='text-xl text-gray-200'>
-                            {"You have to dream before your dreams can come true."}
+                            {"You have to dream before your dreams can come true."} 
                             </p>
                             <h3 className='text-2xl font-semibold'>APJ.Abdul Kalam</h3>
                             <div class="absolute  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
