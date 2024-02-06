@@ -14,7 +14,8 @@ function HomeLayout({ children }) {
     const isLoggedIn = useSelector((state) => state?.auth?.isLoggedIn)
 
     // for displaying the action of acc roles
-    const role=useSelector((state) => state?.auth?.role)
+
+    const role = useSelector((state) => state?.auth?.role)
     function changeWidth() {
         const drawerSide = document.getElementsByClassName("drawer-side")
         drawerSide[0].style.width = "auto"
@@ -23,6 +24,12 @@ function HomeLayout({ children }) {
         const element = document.getElementsByClassName("drawer-toggle");
         element[0].checked = false;
         changeWidth();
+    }
+    function handleLogout(e) {
+        e.preventDefault();
+        // const res =await dispatch(logout())
+        // if(res?.payload?.sucess)
+        navigate("/");
     }
     return (
         <div className='min-h-[90vh]'>
@@ -62,14 +69,19 @@ function HomeLayout({ children }) {
                             <Link to="/about" >About</Link>
                         </li>
                         {!isLoggedIn && (
-                         <div className="w-full flex justify-center items-center">
-                            <button className='btn-primary px-4 py-1 font-semibold rounded-md w-full'>
-                                <Link to='/login'>Login</Link>
-                            </button>
-                            <button className='btn-secondary px-4 py-1 font-semibold rounded-md w-full'>
-                                <Link to='/Signup'>Signup</Link>
-                            </button>
-                         </div>
+                            <li className='absolute bottom-4 w-[90%]' >
+                                <div className="w-full flex justify-center items-center">
+
+                                    <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                        <Link to='/user/profile'>Profile</Link>
+                                    </button>
+
+                                    <button type="button" class="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                        <Link onClick={handleLogout}>Logout</Link>
+                                    </button>
+
+                                </div>
+                            </li>
                         )}
                     </ul>
                 </div>
