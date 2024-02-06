@@ -8,6 +8,7 @@ import steveJobs from "../assets/Image/setve jobs.png"
 import nelsonMandela from "../assets/Image/nelson mandela.png";
 import CarouselSlide from '../Components/CarouselSlide'
 function AboutUs() {
+
     return (
         <HomeLayout>
             <div className='pl-20 pt-20 flex flex-col text-white'>
@@ -33,13 +34,13 @@ function AboutUs() {
                 </div>
 
                 <div class="carousel w-1/2 my-16 m-auto">
-                {/* <CarouselSlide /> */}
+                    {/* <CarouselSlide /> */}
                     <div id="slide1" class="carousel-item relative w-full">
 
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
                             <img src={billGates} class="w-40 rounded-full border-2 border-gray-400" />
                             <p className='text-xl text-gray-200'>
-                            {"Patience is a key element of success..."}
+                                {"Patience is a key element of success..."}
                             </p>
                             <h3 className='text-2xl font-semibold'>Bill Gates</h3>
                             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -55,7 +56,7 @@ function AboutUs() {
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
                             <img src={abj} class="w-40 rounded-full border-2 border-gray-400 	object-fit: cover " />
                             <p className='text-xl text-gray-200'>
-                            {"You have to dream before your dreams can come true."} 
+                                {"You have to dream before your dreams can come true."}
                             </p>
                             <h3 className='text-2xl font-semibold'>APJ.Abdul Kalam</h3>
                             <div class="absolute  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -71,7 +72,7 @@ function AboutUs() {
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
                             <img src={enstine} class="w-40 rounded-full border-2 border-gray-400" />
                             <p className='text-xl text-gray-200'>
-                            {"Anyone who has never made a mistake has never tried anything new"}
+                                {"Anyone who has never made a mistake has never tried anything new"}
                             </p>
                             <h3 className='text-2xl font-semibold'>Albert Enstien</h3>
                             <div class="absolute  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -87,7 +88,7 @@ function AboutUs() {
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
                             <img src={steveJobs} class="w-40 rounded-full border-2 border-gray-400" />
                             <p className='text-xl text-gray-200'>
-                            {"Innovation distinguishes between a leader and a follower."}
+                                {"Innovation distinguishes between a leader and a follower."}
                             </p>
                             <h3 className='text-2xl font-semibold'>Streve Job</h3>
                             <div class="absolute  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -103,7 +104,7 @@ function AboutUs() {
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
                             <img src={nelsonMandela} class="w-40 rounded-full border-2 border-gray-400" />
                             <p className='text-xl text-gray-200'>
-                            {"A winner is a dreamer who never gives up."}
+                                {"A winner is a dreamer who never gives up."}
                             </p>
                             <h3 className='text-2xl font-semibold'>Nelson Mandela</h3>
                             <div class="absolute  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
