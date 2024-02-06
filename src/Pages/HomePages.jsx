@@ -23,7 +23,7 @@ function HomePages() {
                 </div>
 
                 <div className="w-1/2 flex items-center justify-center">
-                        <img src={HomePageImage} alt="homePage Image" />
+                    <img src={HomePageImage} alt="homePage Image" />
                 </div>
 
             </div>
