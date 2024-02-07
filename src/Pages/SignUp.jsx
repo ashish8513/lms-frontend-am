@@ -66,29 +66,29 @@ function SignUp() {
             toast.error("passwords should be 6-16 character long and a number and a special character")
             return
         }
-   
-    const formData = new FormData();
-    formData.append("fullName", SignupData.fullname);
-    formData.append("email", SignupData.email);
-    formData.append("password", SignupData.password);
-    formData.append("avatar", SignupData.avatar);
 
-    // dispatch create account action
-    const response = await 
-    dispatch(createAccount(formData));
-    console.log(response)
+        const formData = new FormData();
+        formData.append("fullName", SignupData.fullname);
+        formData.append("email", SignupData.email);
+        formData.append("password", SignupData.password);
+        formData.append("avatar", SignupData.avatar);
 
-    if (response?.payload?.success)
-        navigate("/");
+        // dispatch create account action
+        const response = await
+            dispatch(createAccount(formData));
+        console.log(response)
 
-    setSignupData({
-        fullname: "",
-        email: "",
-        password: "",
-        avatar: "",
-    });
-    setPreviewImage("")
-}
+        if (response?.payload?.success)
+            navigate("/");
+
+        setSignupData({
+            fullname: "",
+            email: "",
+            password: "",
+            avatar: "",
+        });
+        setPreviewImage("")
+    }
     return (
 
         <HomeLayout>

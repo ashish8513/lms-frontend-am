@@ -1,6 +1,6 @@
-import {createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
-import  axiosInstance  from "../../Helpers/axiosInstance";
+import axiosInstance from "../../Helpers/axiosInstance";
 
 const initialState = {
     isLoogedIn: localStorage.getItem('isLoogedIn') || false,
@@ -24,10 +24,35 @@ export const createAccount = createAsyncThunk("/auth/signup", async (data) => {
         toast.error(error?.response?.data?.message);
     }
 })
+export const login = createAsyncThunk("/auth/login", async (data) => {
+    try {
+        const res = axiosInstance.post('user/login', data);
+        toast.promise(res, {
+            loading: "wait! authentication in progress",
+            success: (data) => {
+                return data?.data?.message;
+            },
+            error: "failed to login",
+        });
+        return (await res).data;
+    } catch (error) {
+        toast.error(error?.response?.data?.message);
+    }
+})
 const AuthSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {},
+    extraReducers: (builder) => {
+        builder.addCase(login.fulfilled, (state, action) => {
+            localStorage.setItem('data', JSON.stringify(action?.payload?.user));
+            localStorage.setItem('isLoogedIn', true);
+            localStorage.setItem('role', action?.payload?.user?.role);
+            state.isLoogedIn = true
+            state.role = action?.payload?.user?.user;
+            state.role =action?.payload?.user?.role
+        })
+    }
 })
 
 // export const {}= AuthSlice.actions;
