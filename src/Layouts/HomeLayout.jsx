@@ -17,6 +17,7 @@ function HomeLayout({ children }) {
     // for displaying the action of acc roles
 
     const role = useSelector((state) => state?.auth?.role)
+    
     function changeWidth() {
         const drawerSide = document.getElementsByClassName("drawer-side")
         drawerSide[0].style.width = "auto"
