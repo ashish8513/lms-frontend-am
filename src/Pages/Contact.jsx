@@ -38,14 +38,14 @@ function Contact() {
                 error: "Failed to send message"
             })
             const contactresponse = await response;
-            if(contactresponse?.data?.success){
+            if (contactresponse?.data?.success) {
                 setUserInput({
                     name: "",
                     email: "",
                     message: "",
                 })
             }
-        } catch (err){
+        } catch (err) {
             toast.error("Operation was failed 😢😢")
         }
 
@@ -71,6 +71,7 @@ function Contact() {
                             placeholder="Enter your Name "
                             type="text"
                             onChange={handleInputChange}
+                            value={userInput.name}
                         />
                     </div>
 
@@ -85,6 +86,7 @@ function Contact() {
                             placeholder="Enter your Email "
                             type="text"
                             onChange={handleInputChange}
+                            value={userInput.email}
                         />
                     </div>
                     <div className="flex flex-col w-full gap-1">
@@ -97,6 +99,7 @@ function Contact() {
                             name="message"
                             placeholder="Enter your Message "
                             onChange={handleInputChange}
+                            value={userInput.message}
                         />
                     </div>
                     <button
