@@ -7,21 +7,22 @@ function Footer() {
         <>
             <footer className='relative left-0 bottom-0 h-[10vh] py-5 flex flex-col sm:flex-row items-center justify-between text-white bg-gray-800 sm:px-20'>
                 <section className='text-lg'>
-                <span className='text-yellow-500 font-bold'>Ashish Prabhakar</span> &nbsp;
+                <span className='text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-green-500 font-bold'>Chandigarh Colleges</span> 
+                {/* &nbsp; */}
                 &copy; copyright {year} All rights reserved
                 </section>
                 <section className='flex items-center justify-center gap-5 text-2xl text-white' >
 
-                    <a href="hover:text-yellow-600  transition-all ease-in-out duration-300">
+                    <a className=" hover:text-yellow-500  transition-all ease-in-out duration-300">
                         <BsFacebook />
                     </a>
-                    <a href="hover:text-yellow-500 transition-all ease-in-out duration-300">
+                    <a className="hover:text-accent transition-all ease-in-out duration-300">
                         <BsInstagram />
                     </a>
-                    <a href="hover:text-yellow-500 transition-all ease-in-out duration-300">
+                    <a className="hover:text-yellow-500 transition-all ease-in-out duration-300">
                         <BsLinkedin />
                     </a>
-                    <a href="hover:text-yellow-500 transition-all ease-in-out duration-300">
+                    <a className="hover:text-yellow-500 transition-all ease-in-out duration-300">
                         <BsTwitter />
                     </a>
 
