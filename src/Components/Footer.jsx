@@ -13,16 +13,17 @@ function Footer() {
                 </section>
                 <section className='flex items-center justify-center gap-5 text-2xl text-white' >
 
-                    <a className=" hover:text-yellow-500  transition-all ease-in-out duration-300">
+                    <a className=" hover:text-yellow-500  transition-all ease-in-out duration-300"
+                    href='https://facebook.com/ashish kumar'>
                         <BsFacebook />
                     </a>
-                    <a className="hover:text-accent transition-all ease-in-out duration-300">
+                    <a className="hover:text-accent transition-all ease-in-out duration-300" href='https://instagram.com/official_angle'>
                         <BsInstagram />
                     </a>
-                    <a className="hover:text-yellow-500 transition-all ease-in-out duration-300">
+                    <a className="hover:text-yellow-500 transition-all ease-in-out duration-300" href='https://linkedin.com/in/ashish-prabhakar-42791324b'>
                         <BsLinkedin />
                     </a>
-                    <a className="hover:text-yellow-500 transition-all ease-in-out duration-300">
+                    <a className="hover:text-yellow-500 transition-all ease-in-out duration-300" href='https://twitter.com/@AshishM8513'>
                         <BsTwitter />
                     </a>
 

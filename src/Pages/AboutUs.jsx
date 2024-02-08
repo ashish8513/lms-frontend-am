@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeLayout from '../Layouts/HomeLayout'
-import aboutImage from "../assets/Image/HomePageImage.png"
+import aboutImage from "../assets/Image/AboutImage.png"
 import abj from "../assets/Image/apj.png"
 import billGates from "../assets/Image/bill gates.png"
 import enstine from "../assets/Image/enstine.png"

@@ -9,6 +9,7 @@ import NotFound from './Pages/NotFound'
 import SignUp from './Pages/SignUp'
 import LoginPage from './Pages/LoginPage'
 import CourseList from './Pages/Course/CourseList'
+import Contact from './Pages/Contact'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<HomePages />}></Route>
         <Route path="/about" element={<AboutUs />}></Route>
         <Route path="/courses" element={ <CourseList />} />
+        <Route path="/contact" element={ <Contact />} />
 
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/signUp" element={<SignUp />} />
