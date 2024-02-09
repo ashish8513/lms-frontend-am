@@ -17,7 +17,7 @@ function HomeLayout({ children }) {
     // for displaying the action of acc roles
 
     const role = useSelector((state) => state?.auth?.role)
-    
+
     function changeWidth() {
         const drawerSide = document.getElementsByClassName("drawer-side")
         drawerSide[0].style.width = "auto"
@@ -29,9 +29,9 @@ function HomeLayout({ children }) {
     }
     async function handleLogout(e) {
         e.preventDefault();
-        const res =await dispatch(logout())
-        if(res?.payload?.sucess)
-        navigate("/");
+        const res = await dispatch(logout())
+        if (res?.payload?.sucess)
+            navigate("/");
     }
     return (
         <div className='min-h-[90vh]'>
@@ -65,7 +65,7 @@ function HomeLayout({ children }) {
                             <Link to="/courses" >All Courses</Link>
                         </li>
                         <li>
-                            <Link to="/" >Contact Us</Link>
+                            <Link to="/contact" >Contact Us</Link>
                         </li>
                         <li>
                             <Link to="/about" >About</Link>

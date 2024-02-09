@@ -19,6 +19,8 @@ function Contact() {
             [name]: value
         })
     }
+    // On sumbit the form it will show the pop message by Toast 
+
     async function onformSubmit(e) {
         e.preventDefault();
         if (!userInput.email || !userInput.name || !userInput.message) {
@@ -91,7 +93,7 @@ function Contact() {
                     </div>
                     <div className="flex flex-col w-full gap-1">
                         <label htmlFor="message" className="text-xl font-semibold">
-                            Message
+                            Message box
                         </label>
                         <textarea
                             className="bg-transparent border px-2 py-1 rounded-sm resize-none h-40"
