@@ -27,23 +27,45 @@ function SignUp() {
             [name]: value
         })
     }
-    function getImage(event) {
+
+
+    // function to handle the image upload
+    const getImage = (event) => {
         event.preventDefault();
-        // gettiing the image
+        // getting the image
         const uploadedImage = event.target.files[0];
+
+        // if image exists then getting the url link of it
         if (uploadedImage) {
             setSignupData({
                 ...SignupData,
-                avatar: uploadedImage
+                avatar: uploadedImage,
             });
             const fileReader = new FileReader();
             fileReader.readAsDataURL(uploadedImage);
             fileReader.addEventListener("load", function () {
-                console.log(this.result)
-                setPreviewImage(this.result);
-            })
+                setImagePreview(this.result);
+            });
         }
-    }
+    };
+
+    // function getImage(event) {
+    //     event.preventDefault();
+    //     // gettiing the image
+    //     const uploadedImage = event.target.files[0];
+    //     if (uploadedImage) {
+    //         setSignupData({
+    //             ...SignupData,
+    //             avatar: uploadedImage,
+    //         });
+    //         const fileReader = new FileReader();
+    //         fileReader.readAsDataURL(uploadedImage);
+    //         fileReader.addEventListener("load", function () {
+    //             console.log(this.result)
+    //             setPreviewImage(this.result);
+    //         })
+    //     }
+    // }
     async function createNewAccount(event) {
         event.preventDefault();
         if (!SignupData.email || !SignupData.password || !SignupDatafullName || !SignupData.avatar) {
@@ -101,12 +123,13 @@ function SignUp() {
                             <BsPersonCircle className='w-24 h-24 rounded-full m-auto' />
                         )}
                     </label>
+                    
                     <input
                         onChange={getImage}
                         type='file'
                         className='hidden'
                         name='image_uploads'
-                        id="image_upload"
+                        id='image_uploads'
                         accept='.jpg,.jpeg,.png,.svg'
                     />
                     <div className='flex flex-col gap-1'>

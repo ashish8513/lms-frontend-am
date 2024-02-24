@@ -1,8 +1,8 @@
 import React from 'react'
 import HomeLayout from '../Layouts/HomeLayout'
-import aboutImage from "../assets/Image/AboutImage.png"
-import abj from "../assets/Image/apj.png"
-import billGates from "../assets/Image/bill gates.png"
+import aboutImage from "../assets/aboutMainImage1.png"
+import apj from "../assets/Image/APJ 1.png"
+import billGates from "../assets/Image/billGates.png"
 import enstine from "../assets/Image/enstine.png"
 import steveJobs from "../assets/Image/setve jobs.png"
 import nelsonMandela from "../assets/Image/nelson mandela.png";
@@ -18,7 +18,7 @@ function AboutUs() {
                             Affordalbe and quality check
                         </h1>
                         <p className='text-xl text-gray-200'>Our goal is to provide the affordable and quality education to the world .
-                            we are providing the platform for the aspiring teachers and students to share theri slills creativety and knowledge to each other to empower and contribute in the growth and wellness of mankind </p>
+                            we are providing the platform for the aspiring teachers and students to share theri slills creativety and knowledge to each other to empower and contribute in the growth and wellness of mankind. </p>
                     </section>
 
                     <div className="w-1/2">
@@ -54,7 +54,7 @@ function AboutUs() {
                     <div id="slide2" class="carousel-item relative w-full">
 
                         <div className=' flex flex-col items-center justify-center gap-4 px-[15%]'>
-                            <img src={abj} class="w-40 rounded-full border-2 border-gray-400 	object-fit: cover " />
+                            <img src={apj} class="w-40 rounded-full border-2 border-gray-400 	object-fit: cover " />
                             <p className='text-xl text-gray-200'>
                                 {"You have to dream before your dreams can come true."}
                             </p>
